@@ -1,0 +1,19 @@
+<html>
+ <head>
+  <title>ERP</title>
+      <link rel="stylesheet" href="css/estilos.css">
+    <body>
+        <?php
+            require_once("php/vistaUsuario.php");
+            require_once("php/vistaProveedor.php");
+            require_once("php/vistaRemplazo.php");
+            require_once("php/vistaVenta.php");
+            require_once("php/vistaProyecto.php");
+            require_once("php/vistaProducto.php");
+            require_once("php/vistaPedido.php");
+            require_once("php/vistaPago.php");
+            require_once("php/vistaMobi.php");
+        ?> 
+    </body>
+  </head>
+</html>
