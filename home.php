@@ -9,6 +9,7 @@
  	<head>
  		<title>ERP</title>
  		<link rel="stylesheet" href="css/estilos.css">
+		 <script src="js/Chart.min.js"></script>
  	</head>
  	<body>
  		<section>
