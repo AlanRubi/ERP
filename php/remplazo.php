@@ -1,6 +1,7 @@
 <?php
 require_once("conexion.php");
 class Remplazo extends Conexion{
+    
     public function alta($IDmobiliario,$fecha,$costo,$descripcion){
         $this->sentencia = "INSERT INTO remplazo VALUES (null,'$IDmobiliario','$fecha','$costo','$descripcion')";
         $this->ejecutarSentencia();

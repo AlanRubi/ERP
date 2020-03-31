@@ -1,3 +1,18 @@
+<div id="grafica">
+    <form action="" method="post">
+        <input type="hidden" value="remplazo" name="tabla">
+        
+        <input type="hidden" value="costo" name="dato">
+        <input type="hidden" value="IDremplazo" name="encabezado">
+        <input type="submit" name="grafica" value="Graficar">
+    </form>
+</div>
+<?php 
+if(isset($_POST["grafica"])){
+    require_once("php/grafica.php");
+}
+?>
+
 <form action="" method="post">
 <input type="text" name="IDmobiliario" placeholder="Mobiliario: "><br>
 <input type="text" name="fecha" placeholder="Fecha: "><br>

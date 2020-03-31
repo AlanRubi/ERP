@@ -1,3 +1,17 @@
+<div id="grafica">
+    <form action="" method="post">
+        <input type="hidden" value="producto" name="tabla">
+        <input type="submit" name="grafica" value="Graficar">
+        <input type="hidden" value="cantidad" name="dato">
+        <input type="hidden" value="nombre" name="encabezado">
+    </form>
+</div>
+<?php 
+if(isset($_POST["grafica"])){
+    require_once("php/grafica.php");
+}
+?>
+
 <form action="" method="post">
 <input type="text" name="nombre" placeholder="Nombre: "><br>
 <input type="text" name="descripcion" placeholder="Descripcion: "><br>

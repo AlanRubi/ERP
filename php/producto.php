@@ -1,8 +1,26 @@
 <?php
 require_once("conexion.php");
 class Producto extends Conexion{
+    public function nombres($nombre,$campo){
+            $this->sentencia = "SELECT $campo FROM $nombre";
+            $res = $this->obtenerSentencia();
+            $nombres="";
+            while($fila = $res->fetch_assoc()){
+                $nombres=$nombres."'".$fila[$campo]."',";
+            }
+            return $nombres;
+    }
+    public function cantidades($nombre,$campo){
+        $this->sentencia = "SELECT $campo FROM $nombre";
+        $res = $this->obtenerSentencia();
+        $nombres="";
+        while($fila = $res->fetch_assoc()){
+            $nombres=$nombres."".$fila[$campo].",";
+        }
+        return $nombres;
+}
     public function alta($nombre,$descripcion,$preciov,$precioc,$cantidad,$cantadmin,$cantmax,$categoria){
-        $this->sentencia = "INSERT INTO producto VALUES (null,'$nombre','$descripcion','$preciov','$precioc','$cantidad','$cantmin','$cantmax','$categoria')";
+        $this->sentencia = "INSERT INTO producto VALUES (null,'$nombre','$descripcion','$preciov','$precioc','$cantidad','$cantadmin','$cantmax','$categoria')";
         $this->ejecutarSentencia();
     }
     public function eliminar ($id){

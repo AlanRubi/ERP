@@ -1,6 +1,7 @@
 <?php
 require_once("conexion.php");
 class Mobiliario extends Conexion{
+
     public function alta($nombre,$descripcion,$cantidad,$nic,$tipo){
         $this->sentencia = "INSERT INTO mobiliario VALUES (null,'$nombre','$descripcion','$cantidad','$nic','$tipo')";
         $this->ejecutarSentencia();
