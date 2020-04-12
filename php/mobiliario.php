@@ -6,7 +6,7 @@ class Mobiliario extends Conexion{
         $this->sentencia = "INSERT INTO mobiliario VALUES (null,'$nombre','$descripcion','$cantidad','$nic','$tipo')";
         $this->ejecutarSentencia();
     }
-    public function eliminar ($id){
+    public function baja ($id){
         $this->sentencia = "DELETE FROM mobiliario WHERE IDmobiliario=$id";
         $this->ejecutarSentencia();
     }
@@ -14,8 +14,14 @@ class Mobiliario extends Conexion{
         $this->sentencia = "SELECT * FROM mobiliario";
         return $this->obtenerSentencia();
     }
-    public function modificar($nombre,$descripcion,$cantidad,$nic,$tipo){
-        $this->sentencia = "UPDATE FROM mobiliario SET nombre='$nombre', descripcion='$descripcion', cantidad='$cantidad', nic='$nic', tipo='$tipo' WHERE IDmobiliario='$id'";
+    public function modificar($nombre,$descripcion,$cantidad,$nic,$tipo,$id){
+        $this->sentencia = "UPDATE mobiliario SET nombre='$nombre', descripcion='$descripcion', cantidad='$cantidad', 
+        nic='$nic', tipo='$tipo' WHERE IDmobiliario='$id'";
+        $this->ejecutarSentencia();
+    }
+    public function buscar($id){
+        $this->sentencia = "SELECT * FROM mobiliario WHERE IDmobiliario=$id";
+        return $this->obtenerSentencia();
     }
 }
 ?>

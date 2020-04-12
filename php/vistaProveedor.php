@@ -14,7 +14,6 @@ if(!isset($_POST["modificar"])){
 </form>
 <?php }else{ 
     $res = $obj->buscar($_POST["id"]);
-
     $fila = $res->fetch_assoc();
     ?>
 
@@ -91,15 +90,15 @@ if(isset($_GET["el"])){
         ?>
         <td>
                 <form action="" method="post">
- <input type="hidden" value="<?php echo $fila['IDproveedor'] ?>" name="id">
- <input type="submit" name="eliminar" value="Eliminar">
+                    <input type="hidden" value="<?php echo $fila['IDproveedor'] ?>" name="id">
+                    <input type="submit" name="eliminar" value="Eliminar">
                 </form>
             </td>
 
             <td>
                 <form action="" method="post">
- <input type="hidden" value="<?php echo $fila['IDproveedor'] ?>" name="id">
- <input type="submit" name="modificar" value="Modificar">
+                    <input type="hidden" value="<?php echo $fila['IDproveedor'] ?>" name="id">
+                    <input type="submit" name="modificar" value="Modificar">
                 </form>
             </td>
         <?php
